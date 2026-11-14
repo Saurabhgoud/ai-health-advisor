@@ -1,16 +1,46 @@
-# React + Vite
+# AI Health Advisor
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A full-stack **MERN** health management web application with AI-powered health guidance.
 
-Currently, two official plugins are available:
+**Live Demo:** https://ai-health-advisor-saurabh-f7c6.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About
 
-## React Compiler
+AI Health Advisor helps users manage their daily health in one place. Users can track nutrition, water intake, weight and sleep, view health reports and progress charts, and get general health and wellness guidance from an AI advisor powered by the Google Gemini API.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- Secure authentication with JWT and bcrypt password hashing
+- Personal dashboard with BMI, daily calories, water and sleep goals
+- AI Health Advisor chat (Google Gemini API) with built-in safety rules
+- Nutrition Tracker with USDA FoodData Central food search
+- Water Tracker with daily intake goal
+- Health Reports and progress charts
+- User profile with personal health goals
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React.js, JavaScript, Vite, React Router, Recharts |
+| Backend | Node.js, Express.js (REST API) |
+| Database | MongoDB Atlas with Mongoose |
+| Authentication | JWT, bcrypt |
+| AI | Google Gemini API |
+| Food Data | USDA FoodData Central API |
+| Deployment | Vercel (frontend and serverless backend) |
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+The backend requires a `.env` file with `MONGO_URI`, `JWT_SECRET`, `GEMINI_API_KEY`, `GEMINI_MODEL` and `FDC_API_KEY`.
+
+## Author
+
+**Saurabh** — Full Stack Developer (MERN Stack)
+
+LinkedIn: https://www.linkedin.com/in/saurabh-goud
