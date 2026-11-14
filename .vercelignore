@@ -1,0 +1,7 @@
+node_modules
+dist
+Backend/.env
+.env
+.env.*
+folder-structure.txt
+local-test.mjs

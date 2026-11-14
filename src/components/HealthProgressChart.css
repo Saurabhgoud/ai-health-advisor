@@ -1,0 +1,363 @@
+.health-progress-card {
+  width: 100%;
+  max-width: 1120px;
+  margin: 22px 0 0 0;
+  padding: 20px;
+  border: 1px solid #dce5f0;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 12px 34px rgba(16, 36, 73, 0.055);
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+.health-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.health-progress-title-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.health-progress-main-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background:
+    linear-gradient(
+      145deg,
+      #f0f2ff,
+      #f7f4ff);
+  color: #604ef1;
+  font-size: 21px;
+}
+.health-progress-eyebrow {
+  display: block;
+  color: #4274eb;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.health-progress-header h2 {
+  margin: 3px 0 3px;
+  color: #12203a;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.health-progress-header p {
+  margin: 0;
+  color: #74839a;
+  font-size: 10px;
+  line-height: 1.4;
+}
+.health-progress-legend {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.health-progress-legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #28364f;
+  font-size: 9px;
+  font-weight: 650;
+}
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.weight-dot {
+  background: #10b39c;
+}
+.bmi-dot {
+  background: #f34886;
+}
+.sleep-dot {
+  background: #7048f5;
+}
+.health-progress-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+.progress-summary-card {
+  min-width: 0;
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f2;
+  border-radius: 13px;
+  background: #ffffff;
+}
+.weight-summary-card {
+  border-color: rgba(16, 179, 156, 0.25);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(16, 179, 156, 0.055),
+      #ffffff);
+}
+.bmi-summary-card {
+  border-color: rgba(243, 72, 134, 0.25);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(243, 72, 134, 0.055),
+      #ffffff);
+}
+.sleep-summary-card {
+  border-color: rgba(112, 72, 245, 0.25);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(112, 72, 245, 0.055),
+      #ffffff);
+}
+.progress-summary-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.weight-summary-icon {
+  background: rgba(16, 179, 156, 0.1);
+  color: #0ca58f;
+}
+.bmi-summary-icon {
+  background: rgba(243, 72, 134, 0.1);
+  color: #e43d7c;
+}
+.sleep-summary-icon {
+  background: rgba(112, 72, 245, 0.1);
+  color: #6540e8;
+}
+.progress-summary-content {
+  min-width: 0;
+}
+.progress-summary-content > span {
+  display: block;
+  color: #26344d;
+  font-size: 9px;
+  font-weight: 650;
+}
+.progress-summary-content strong {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-top: 3px;
+  color: #101e36;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1;
+}
+.progress-summary-content strong small {
+  color: #6f7e95;
+  font-size: 9px;
+  font-weight: 600;
+}
+.progress-summary-change {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 0;
+}
+.progress-change {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 8.5px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.positive-change {
+  color: #08a26c;
+}
+.warning-change {
+  color: #df7b32;
+}
+.sleep-change {
+  color: #6540e8;
+}
+.progress-summary-change small {
+  margin-top: 3px;
+  color: #8793a8;
+  font-size: 7.5px;
+  white-space: nowrap;
+}
+.health-progress-chart-shell {
+  position: relative;
+  margin-top: 16px;
+  padding: 14px 12px 12px;
+  border: 1px solid #e2e8f1;
+  border-radius: 15px;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fafcff 100%);
+}
+.chart-axis-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px 2px;
+  font-size: 9px;
+  font-weight: 700;
+}
+.weight-axis-label {
+  color: #0ca58f;
+}
+.sleep-axis-label {
+  color: #6540e8;
+}
+.health-progress-chart {
+  width: 100%;
+  height: 310px;
+  margin-top: 4px;
+}
+.health-progress-range-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.range-button {
+  min-width: 72px;
+  padding: 7px 12px;
+  border: 1px solid #dce4ef;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #35435d;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 8.5px;
+  font-weight: 650;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.range-button:hover {
+  border-color: #b6c2ef;
+  background: #f6f7ff;
+}
+.range-button-active {
+  border-color: #5c4bf0;
+  background:
+    linear-gradient(
+      135deg,
+      #5368ff,
+      #6842eb);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(91, 73, 236, 0.2);
+}
+.health-progress-empty {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  border: 1px dashed #d0dae9;
+  border-radius: 13px;
+  background: #f8fafc;
+  text-align: center;
+}
+.health-progress-empty h3 {
+  margin: 0;
+  color: #263751;
+  font-size: 13px;
+}
+.health-progress-empty p {
+  margin: 6px 0 0;
+  color: #7b8aa1;
+  font-size: 9px;
+}
+.health-progress-loading,
+.health-progress-error {
+  margin: 0;
+  font-size: 10px;
+}
+.health-progress-error {
+  color: #cf4558;
+}
+.health-progress-chart .recharts-cartesian-axis-tick-value {
+  fill: #697991;
+  font-size: 10px;
+}
+.health-progress-chart .recharts-cartesian-grid line {
+  stroke: #e6ebf4;
+}
+.health-progress-chart .recharts-tooltip-wrapper {
+  font-size: 10px;
+}
+@media (max-width: 1000px) {
+  .health-progress-card {
+    max-width: 100%;
+  }
+}
+@media (max-width: 850px) {
+  .health-progress-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .health-progress-summary {
+    grid-template-columns: 1fr;
+  }
+  .health-progress-chart {
+    height: 270px;
+  }
+}
+@media (max-width: 600px) {
+  .health-progress-card {
+    padding: 13px;
+    border-radius: 14px;
+  }
+  .health-progress-main-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .health-progress-header h2 {
+    font-size: 18px;
+  }
+  .progress-summary-card {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .progress-summary-change {
+    grid-column: 2;
+    align-items: flex-start;
+  }
+  .health-progress-chart {
+    height: 240px;
+  }
+  .range-button {
+    flex: 1;
+    min-width: 78px;
+  }
+}

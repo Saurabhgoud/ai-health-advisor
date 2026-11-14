@@ -1,0 +1,45 @@
+﻿AI Health Advisor
+├── Backend
+│   ├── config
+│   │   └── db.js
+│   ├── controllers
+│   │   └── authController.js
+│   ├── middleware
+│   │   └── authMiddleware.js
+│   ├── models
+│   │   └── user.js
+│   ├── routes
+│   │   └── authRoutes.js
+│   ├── .env
+│   ├── index.js
+│   ├── package.json
+│   └── package-lock.json
+├── Frontend
+│   ├── api
+│   │   └── axios.js
+│   ├── components
+│   │   └── ProtectedRoute.jsx
+│   └── pages
+│       ├── Dashboard.jsx
+│       ├── login.jsx
+│       ├── Signup.css
+│       └── Signup.jsx
+├── public
+│   ├── favicon.svg
+│   └── icons.svg
+├── src
+│   ├── assets
+│   │   ├── hero.png
+│   │   ├── react.svg
+│   │   └── vite.svg
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── .oxlintrc.json
+├── index.html
+├── package.json
+├── package-lock.json
+├── README.md
+└── vite.config.js

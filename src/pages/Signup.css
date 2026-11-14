@@ -1,0 +1,163 @@
+.simple-signup-page {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(55, 116, 236, 0.14),
+      transparent 34%),
+    radial-gradient(
+      circle at bottom right,
+      rgba(125, 67, 236, 0.12),
+      transparent 32%),
+    #f4f7fc;
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+.simple-signup-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 30px;
+  border: 1px solid #dce5f1;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 20px 50px rgba(15, 34, 67, 0.1), 0 4px 14px rgba(15, 34, 67, 0.05);
+}
+.simple-signup-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 25px;
+}
+.simple-signup-heading > span {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background:
+    linear-gradient(
+      135deg,
+      #2879ff,
+      #7d43ec);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 9px 22px rgba(43, 105, 243, 0.25);
+}
+.simple-signup-heading h1 {
+  margin: 0;
+  color: #10203a;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.simple-signup-heading p {
+  margin: 5px 0 0;
+  color: #7b8ba5;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.simple-signup-error {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border: 1px solid rgba(220, 71, 87, 0.18);
+  border-radius: 10px;
+  background: rgba(220, 71, 87, 0.07);
+  color: #d84757;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.simple-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.simple-signup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.simple-signup-field label {
+  color: #34445f;
+  font-size: 11px;
+  font-weight: 700;
+}
+.simple-signup-field input {
+  width: 100%;
+  height: 44px;
+  padding: 0 13px;
+  border: 1px solid #d8e1ee;
+  border-radius: 11px;
+  outline: none;
+  background: #f9fbfe;
+  color: #10203a;
+  font-size: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+.simple-signup-field input::placeholder {
+  color: #a2aec0;
+}
+.simple-signup-field input:focus {
+  border-color: #4b7cf2;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(55, 116, 236, 0.1);
+}
+.simple-signup-button {
+  width: 100%;
+  height: 45px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 11px;
+  background:
+    linear-gradient(
+      135deg,
+      #2879ff,
+      #7048eb);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 9px 22px rgba(43, 105, 243, 0.23);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+.simple-signup-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(43, 105, 243, 0.28);
+}
+.simple-signup-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+.simple-signup-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+@media (max-width: 480px) {
+  .simple-signup-page {
+    padding: 16px;
+  }
+  .simple-signup-card {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+  .simple-signup-heading h1 {
+    font-size: 23px;
+  }
+  .simple-signup-form {
+    gap: 14px;
+  }
+}

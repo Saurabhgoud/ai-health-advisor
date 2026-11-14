@@ -1,0 +1,527 @@
+.health-navbar,
+.health-navbar * {
+  box-sizing: border-box;
+}
+.health-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  width: 100%;
+  min-height: 92px;
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) minmax(300px, 520px) auto;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 24px;
+  overflow: visible;
+  border-bottom: 1px solid #e7ebf2;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 30px rgba(18, 45, 80, 0.05);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+.health-navbar-greeting {
+  grid-column: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.health-navbar-greeting > div {
+  min-width: 0;
+}
+.health-navbar-greeting h1 {
+  margin: 0;
+  overflow: hidden;
+  color: #121722;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.health-navbar-greeting p {
+  margin: 6px 0 0;
+  color: #68758a;
+  font-size: 13px;
+  font-weight: 500;
+}
+.greeting-emoji {
+  display: inline-block;
+  margin-left: 5px;
+  transform-origin: bottom center;
+  animation: greeting-wave 1.8s ease-in-out infinite;
+}
+@keyframes greeting-wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(12deg);
+  }
+  50% {
+    transform: rotate(-7deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
+}
+.navbar-menu-button {
+  width: 42px;
+  height: 42px;
+  display: none;
+  place-items: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: 1px solid #e2e7ef;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #263750;
+  cursor: pointer;
+  font-size: 21px;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+.navbar-menu-button:hover {
+  border-color: #bad3fa;
+  background: #f1f6ff;
+  color: #1769e0;
+  transform: translateY(-1px);
+}
+.health-navbar-search {
+  grid-column: 2;
+  width: 100%;
+  min-width: 0;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 15px;
+  border: 1px solid #dfe5ed;
+  border-radius: 12px;
+  background: #fbfcfe;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+.health-navbar-search:focus-within {
+  border-color: #2f7df5;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(47, 125, 245, 0.09);
+}
+.health-navbar-search svg {
+  flex-shrink: 0;
+  color: #65748a;
+  font-size: 19px;
+}
+.health-navbar-search input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #263750;
+  font-family: inherit;
+  font-size: 13px;
+}
+.health-navbar-search input::placeholder {
+  color: #778398;
+}
+.health-navbar-search input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+.health-navbar-actions {
+  grid-column: 3;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.navbar-icon-button {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: 1px solid #e2e7ef;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #18243a;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 5px 15px rgba(25, 49, 81, 0.05);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+.navbar-icon-button:hover {
+  border-color: #bad3fa;
+  background: #f1f6ff;
+  color: #1769e0;
+  transform: translateY(-1px);
+}
+.notification-count {
+  position: absolute;
+  top: -4px;
+  right: -2px;
+  min-width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  padding: 0 4px;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  background: #ff4338;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 800;
+}
+.navbar-profile-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+.navbar-profile-button {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 9px 4px 5px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.navbar-profile-button:hover {
+  border-color: #e0e7f0;
+  background: #f7f9fc;
+}
+.navbar-profile-avatar,
+.navbar-profile-image {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+.navbar-profile-avatar {
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(
+      135deg,
+      #257df5,
+      #16c1bd);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+}
+.navbar-profile-image {
+  object-fit: cover;
+  border: 2px solid #e8edf4;
+}
+.navbar-profile-name {
+  max-width: 100px;
+  overflow: hidden;
+  color: #233148;
+  font-size: 12px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.profile-arrow {
+  flex-shrink: 0;
+  color: #768398;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+.profile-arrow-open {
+  transform: rotate(180deg);
+}
+.navbar-profile-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 1100;
+  width: 270px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(21, 44, 75, 0.16);
+  animation: profile-dropdown-show 0.18s ease;
+}
+@keyframes profile-dropdown-show {
+  from {
+    opacity: 0;
+    transform: translateY(-7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.profile-dropdown-user {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 17px;
+  border-bottom: 1px solid #edf0f5;
+}
+.profile-dropdown-user > span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #eaf2ff;
+  color: #2371e8;
+  font-size: 17px;
+}
+.profile-dropdown-user div {
+  min-width: 0;
+}
+.profile-dropdown-user strong {
+  display: block;
+  overflow: hidden;
+  color: #1c2a40;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.profile-dropdown-user p {
+  margin: 4px 0 0;
+  overflow: hidden;
+  color: #7b8798;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.profile-logout-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 17px;
+  border: none;
+  background: #ffffff;
+  color: #c43e49;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+.profile-logout-button:hover {
+  background: #fff2f3;
+}
+.navbar-date-button {
+  min-width: 140px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-shrink: 0;
+  padding: 0 13px;
+  border: 1px solid #e0e5ed;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #26364e;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+}
+.navbar-date-button svg {
+  flex-shrink: 0;
+  color: #526682;
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .health-navbar {
+    grid-template-columns: minmax(210px, 1fr) minmax(230px, 400px) auto;
+    gap: 15px;
+    padding: 13px 18px;
+  }
+  .navbar-date-button {
+    display: none;
+  }
+  .navbar-profile-name,
+  .profile-arrow {
+    display: none;
+  }
+  .navbar-profile-button {
+    min-height: 40px;
+    padding: 2px;
+  }
+}
+@media (max-width: 850px) {
+  .health-navbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    gap: 11px 12px;
+    padding: 12px 14px 13px;
+  }
+  .health-navbar-greeting {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .health-navbar-actions {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .navbar-menu-button {
+    display: grid;
+  }
+  .health-navbar-greeting h1 {
+    font-size: 18px;
+  }
+  .health-navbar-greeting p {
+    font-size: 11px;
+  }
+  .health-navbar-search {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    height: 43px;
+  }
+  .health-navbar-search input {
+    font-size: 16px;
+  }
+}
+@media (max-width: 560px) {
+  .health-navbar {
+    gap: 10px;
+    padding: 10px 11px 12px;
+  }
+  .health-navbar-greeting {
+    gap: 8px;
+  }
+  .navbar-menu-button {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 19px;
+  }
+  .health-navbar-greeting h1 {
+    max-width: 170px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .health-navbar-greeting p {
+    display: none;
+  }
+  .health-navbar-actions {
+    gap: 5px;
+  }
+  .navbar-icon-button {
+    width: 37px;
+    height: 37px;
+    font-size: 16px;
+  }
+  .health-navbar-actions > .navbar-icon-button:nth-of-type(2) {
+    display: none;
+  }
+  .navbar-profile-button {
+    min-height: 37px;
+    padding: 0;
+  }
+  .navbar-profile-avatar,
+  .navbar-profile-image {
+    width: 36px;
+    height: 36px;
+  }
+  .health-navbar-search {
+    height: 42px;
+    padding: 0 12px;
+    border-radius: 10px;
+  }
+  .health-navbar-search svg {
+    font-size: 17px;
+  }
+  .navbar-profile-dropdown {
+    position: fixed;
+    top: 61px;
+    right: 10px;
+    width: min(270px, calc(100vw - 20px));
+    max-height: calc(100dvh - 75px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 390px) {
+  .health-navbar {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .health-navbar-greeting {
+    gap: 6px;
+  }
+  .navbar-menu-button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  .health-navbar-greeting h1 {
+    max-width: 135px;
+    font-size: 14px;
+  }
+  .greeting-emoji {
+    display: none;
+  }
+  .health-navbar-actions {
+    gap: 4px;
+  }
+  .navbar-icon-button {
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+  .navbar-profile-avatar,
+  .navbar-profile-image {
+    width: 34px;
+    height: 34px;
+  }
+  .notification-count {
+    top: -5px;
+    right: -3px;
+    min-width: 17px;
+    height: 17px;
+    font-size: 8px;
+  }
+  .health-navbar-search {
+    height: 40px;
+  }
+}
+@media (max-width: 340px) {
+  .health-navbar {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .health-navbar-greeting h1 {
+    max-width: 105px;
+    font-size: 13px;
+  }
+  .health-navbar-actions > .navbar-icon-button:first-of-type {
+    display: none;
+  }
+}
