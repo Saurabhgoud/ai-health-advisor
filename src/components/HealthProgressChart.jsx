@@ -32,13 +32,17 @@ const rangeOptions = [
   {
     label: "6 Months",
     value: 180
+  },
+  {
+    label: "All Time",
+    value: "all"
   }
 ];
 function HealthProgressChart() {
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [selectedRange, setSelectedRange] = useState(30);
+  const [selectedRange, setSelectedRange] = useState("all");
   useEffect(() => {
     const fetchHistory = async () => {
       try {
@@ -60,6 +64,9 @@ function HealthProgressChart() {
     const rangeStart = new Date();
     rangeStart.setDate(now.getDate() - selectedRange);
     return history.filter((item) => {
+      if (selectedRange === "all") {
+        return true;
+      }
       const recordDate = new Date(item.recordedAt);
       return recordDate >= rangeStart;
     }).map((item) => ({

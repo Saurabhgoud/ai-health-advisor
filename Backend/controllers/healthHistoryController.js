@@ -5,7 +5,7 @@ const getMyHealthHistory = async (req, res) => {
       user: req.userId
     }).sort({
       recordedAt: 1
-    }).limit(30);
+    });
     return res.status(200).json({
       success: true,
       history
