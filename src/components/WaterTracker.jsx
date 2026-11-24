@@ -83,13 +83,7 @@ function WaterTracker({ profile }) {
     }
   };
   return <section className="water-tracker">
-      <div className="water-heading">
-        <div>
-          <span>HEALTH & FITNESS</span>
-          <h2>Water Tracker</h2>
-          <p>Stay hydrated and track your daily water intake.</p>
-        </div>
-
+      <div className="water-heading" style={{ justifyContent: "flex-end" }}>
         <div className="water-date">
           <FiDroplet />
           <span>{currentDate}</span>

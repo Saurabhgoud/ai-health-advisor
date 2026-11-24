@@ -25,6 +25,14 @@ const sectionTitles = {
   profile: "Profile",
   settings: "Settings"
 };
+const sectionSubtitles = {
+  dashboard: "A summary of your health, nutrition and daily goals.",
+  "ai-advisor": "Chat with your AI wellness coach about nutrition, fitness, sleep and healthy habits.",
+  "health-report": "Your recorded health metrics and progress over time.",
+  nutrition: "Track your daily food and nutrition intake.",
+  water: "Stay hydrated and track your daily water intake.",
+  profile: "Manage your personal health and fitness information."
+};
 function Dashboard() {
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -94,6 +102,7 @@ function Dashboard() {
     setProfileError("");
   };
   const currentSectionTitle = sectionTitles[activeItem] || "Dashboard";
+  const currentSectionSubtitle = sectionSubtitles[activeItem] || "Your personalized health information will appear here.";
   if (loading) {
     return <div className="dashboard-loading">Loading dashboard...</div>;
   }
@@ -128,7 +137,7 @@ function Dashboard() {
 
               <h1>{currentSectionTitle}</h1>
 
-              <p>Your personalized health information will appear here.</p>
+              <p>{currentSectionSubtitle}</p>
             </div>
 
             <button

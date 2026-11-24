@@ -174,13 +174,7 @@ function NutritionTracker() {
     }
   ];
   return <section className="nutrition-tracker">
-      <div className="nutrition-heading">
-        <div>
-          <span>HEALTH & FITNESS</span>
-          <h2>Nutrition Tracker</h2>
-          <p>Track your daily food and nutrition intake.</p>
-        </div>
-
+      <div className="nutrition-heading" style={{ justifyContent: "flex-end" }}>
         <div className="nutrition-date">
           <FiTarget />
           <span>Daily Nutrition</span>
