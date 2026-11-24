@@ -41,11 +41,6 @@ function HealthReport() {
   };
   return <div className="health-report">
       <div className="health-report-header">
-        <div>
-          <h1>Health Report</h1>
-          <p>View and manage your complete health history</p>
-        </div>
-
         <button className="download-pdf-button" onClick={downloadPDF}>
           ↓ Download PDF
         </button>
