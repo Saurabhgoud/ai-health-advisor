@@ -30,7 +30,7 @@ function HealthReport() {
       new Date(record.recordedAt).toLocaleDateString(),
       `${record.weightKg} kg`,
       record.bmi,
-      `${record.sleepGoalHour} hrs`
+      `${record.sleepGoalHours} hrs`
     ]);
     autoTable(doc, {
       startY: 35,
@@ -79,7 +79,7 @@ function HealthReport() {
                       <span className="bmi-badge">{record.bmi}</span>
                     </td>
 
-                    <td>{record.sleepGoalHour} hrs</td>
+                    <td>{record.sleepGoalHours} hrs</td>
                   </tr>) : <tr>
                   <td colSpan="4" className="no-health-records">
                     No health records found.
